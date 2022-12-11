@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://awatesolo.github.io</id>
     <title>Awatesolo的博客</title>
-    <updated>2022-12-11T02:13:04.058Z</updated>
+    <updated>2022-12-11T02:23:07.489Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://awatesolo.github.io"/>
     <link rel="self" href="https://awatesolo.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://awatesolo.github.io/images/avatar.png</logo>
     <icon>https://awatesolo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Awatesolo的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[稀疏矩阵]]></title>
+        <id>https://awatesolo.github.io/post/xi-shu-ju-zhen/</id>
+        <link href="https://awatesolo.github.io/post/xi-shu-ju-zhen/">
+        </link>
+        <updated>2022-12-11T02:15:18.000Z</updated>
+        <content type="html"><![CDATA[<p>题目描述<br>
+  大部分元素是0的矩阵称为稀疏矩阵，假设有k个非0元素，则可把稀疏矩阵用K<em>3的矩阵简记之，其中第一列是行号，第二列是列号，第三列是该行、该列下的非元素的值。如：<br>
+    0  0  0  5         写简记成： 1  4  5      //第1行第4列有个数是5<br>
+    0  2  0  0                          2  2  2      //第2行第2列有个数是2<br>
+    0  1  0  0                          3  2  1      //第3行第2列有个数是1<br>
+   试编程读入一稀疏矩阵，转换成简记形式，并输出。<br>
+输入<br>
+第一行两个整数n和m，1≤n,m≤1000；<br>
+接下来共n行，每行m个整数，表示一个n</em>m的稀疏矩阵，其中稀疏矩阵非0元素个数为k，1≤k≤100。<br>
+输出<br>
+k行，每行三个整数，描述稀疏矩阵一个非0元素。<br>
+样例输入<br>
+3 5<br>
+0 0 0 0 5<br>
+0 0 4 0 0<br>
+1 0 0 0 1<br>
+样例输出<br>
+1 5 5<br>
+2 3 4<br>
+3 1 1<br>
+3 5 1<br>
+*注：内存限制3MB<br>
+//因为有内存限制，所以不能用二维数组做<br>
+//代码懒得写，直接一个数一个数的读就刑</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[矩阵乘矩阵]]></title>
         <id>https://awatesolo.github.io/post/qiu-su-shu/</id>

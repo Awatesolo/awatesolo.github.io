@@ -2,21 +2,18 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>矩阵乘矩阵 | Awatesolo的博客</title>
+<title>稀疏矩阵 | Awatesolo的博客</title>
 <link rel="shortcut icon" href="https://awatesolo.github.io/favicon.ico?v=1670725382946">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://awatesolo.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="矩阵乘矩阵 | Awatesolo的博客 - Atom Feed" href="https://awatesolo.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="稀疏矩阵 | Awatesolo的博客 - Atom Feed" href="https://awatesolo.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="BLOG第一篇文章，QQ：1242454364
-题目描述
-分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。
-下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵
-
-关于矩阵运算的内容，点击以下链接自..." />
+    <meta name="description" content="题目描述
+  大部分元素是0的矩阵称为稀疏矩阵，假设有k个非0元素，则可把稀疏矩阵用K3的矩阵简记之，其中第一列是行号，第二列是列号，第三列是该行、该列下的非元素的值。如：
+    0  0  0  5         写简记成： 1  4..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -79,81 +76,44 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              矩阵乘矩阵
+              稀疏矩阵
             </h2>
             <div class="post-info">
               <span>
-                2022-12-10
+                2022-12-11
               </span>
               <span>
-                3 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>BLOG第一篇文章，QQ：1242454364<br>
-题目描述<br>
-分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。<br>
-下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵<br>
-<img src="https://awatesolo.github.io/post-images/1670651041141.gif" alt="" loading="lazy"><br>
-关于矩阵运算的内容，点击以下链接自行补脑 https://blog.csdn.net/enjoy_pascal/article/details/78023441<br>
-<img src="https://awatesolo.github.io/post-images/1670651072232.jpg" alt="" loading="lazy"><br>
+                <p>题目描述<br>
+  大部分元素是0的矩阵称为稀疏矩阵，假设有k个非0元素，则可把稀疏矩阵用K<em>3的矩阵简记之，其中第一列是行号，第二列是列号，第三列是该行、该列下的非元素的值。如：<br>
+    0  0  0  5         写简记成： 1  4  5      //第1行第4列有个数是5<br>
+    0  2  0  0                          2  2  2      //第2行第2列有个数是2<br>
+    0  1  0  0                          3  2  1      //第3行第2列有个数是1<br>
+   试编程读入一稀疏矩阵，转换成简记形式，并输出。<br>
 输入<br>
-第一行三个正整数 n、p、m，表示矩阵的长宽。<br>
-之后的 n行，每行 p个整数，表示矩阵 A 。<br>
-之后的 p 行，每行 m 个整数，表示矩阵 B。<br>
+第一行两个整数n和m，1≤n,m≤1000；<br>
+接下来共n行，每行m个整数，表示一个n</em>m的稀疏矩阵，其中稀疏矩阵非0元素个数为k，1≤k≤100。<br>
 输出<br>
-输出 n 行，每行 m个整数，表示矩阵 A×B ，每个数模10 ^ 9 + 7 输出，如果输出为负数则将该数加上10^9+7。<br>
+k行，每行三个整数，描述稀疏矩阵一个非0元素。<br>
 样例输入<br>
-3 4 5<br>
--2 -8 -9 8<br>
--10 0 6 -8<br>
--10 -6 6 9<br>
-4 -7 5 -5 9<br>
-10 -2 -10 5 5<br>
--3 -7 -3 8 -2<br>
--6 7 7 3 -2<br>
+3 5<br>
+0 0 0 0 5<br>
+0 0 4 0 0<br>
+1 0 0 0 1<br>
 样例输出<br>
-999999898 149 153 999999929 999999951<br>
-999999997 999999979 999999883 74 999999921<br>
-999999835 103 55 95 999999857<br>
-//代码<br>
-#include &lt;bits/stdc++.h&gt;<br>
-#define MN 100+10<br>
-using namespace std;<br>
-const int mod=1000000007;<br>
-long long a[MN][MN],b[MN][MN],c[MN][MN];<br>
-int main()<br>
-{<br>
-int n,p,m;<br>
-cin&gt;&gt;n&gt;&gt;p&gt;&gt;m;<br>
-for(int i=1;i&lt;=n;i++){<br>
-for(int j=1;j&lt;=p;j++)<br>
-cin&gt;&gt;a[i][j];<br>
-}<br>
-for(int i=1;i&lt;=p;i++){<br>
-for(int j=1;j&lt;=m;j++)<br>
-cin&gt;&gt;b[i][j];<br>
-}<br>
-for(int i=1;i&lt;=n;i++){<br>
-for(int j=1;j&lt;=m;j++){<br>
-for(int k=1;k&lt;=p;k++){<br>
-c[i][j]=(c[i][j]+a[i][k]*b[k][j])%mod;<br>
-}<br>
-}<br>
-}<br>
-for(int i=1;i&lt;=n;i++){<br>
-for(int j=1;j&lt;=m;j++){<br>
-if(c[i][j]&lt;0)<br>
-c[i][j]=(c[i][j]+mod)%mod;<br>
-cout&lt;&lt;c[i][j]&lt;&lt;&quot; &quot;;<br>
-}<br>
-cout&lt;&lt;endl;<br>
-}<br>
-return 0;<br>
-}</p>
+1 5 5<br>
+2 3 4<br>
+3 1 1<br>
+3 5 1<br>
+*注：内存限制3MB<br>
+//因为有内存限制，所以不能用二维数组做<br>
+//代码懒得写，直接一个数一个数的读就刑</p>
 
               </div>
               <div class="toc-container">
@@ -163,6 +123,15 @@ return 0;<br>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://awatesolo.github.io/post/qiu-su-shu/">
+              <h3 class="post-title">
+                矩阵乘矩阵
+              </h3>
+            </a>
+          </div>
         
 
         
