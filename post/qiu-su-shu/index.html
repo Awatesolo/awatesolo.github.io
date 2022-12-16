@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 圣诞节快乐！</title>
+<title>矩阵乘矩阵 | 圣诞节快乐！</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -25,13 +25,13 @@
 
 
     <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+BLOG第一篇文章，QQ：1242454364
+题目描述
+分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。
+下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵
 
-🏠 关于本站 Awatesolo的博客
-👨‍💻 博主是谁 原名盛天，初一学生
-⛹ 兴趣爱好 没什么爱好，会点c++
-📬 联系我呀 QQ:1242454364 mail:Awatesolo@..." />
-    <meta name="keywords" content="" />
+关于矩阵运算的内容，点击以下链接..." />
+    <meta name="keywords" content="二维数组,基础但变态" />
   </head>
   <body>
     <div id="app" class="main">
@@ -102,19 +102,86 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">矩阵乘矩阵</h2>
+            <div class="post-date">2022-12-10</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站-awatesolo的博客">🏠 关于本站 Awatesolo的博客</h2>
-<h2 id="博主是谁-原名盛天初一学生">👨‍💻 博主是谁 原名盛天，初一学生</h2>
-<h2 id="兴趣爱好-没什么爱好会点c">⛹ 兴趣爱好 没什么爱好，会点c++</h2>
-<h2 id="联系我呀-qq1242454364-mailawatesolo163com">📬 联系我呀 QQ:1242454364 mail:Awatesolo@163.com</h2>
+              <!-- more -->
+<p>BLOG第一篇文章，QQ：1242454364<br>
+题目描述<br>
+分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。<br>
+下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵<br>
+<img src="https://awatesolo.github.io/post-images/1670651041141.gif" alt="" loading="lazy"><br>
+关于矩阵运算的内容，点击以下链接自行补脑 https://blog.csdn.net/enjoy_pascal/article/details/78023441<br>
+<img src="https://awatesolo.github.io/post-images/1670651072232.jpg" alt="" loading="lazy"><br>
+输入<br>
+第一行三个正整数 n、p、m，表示矩阵的长宽。<br>
+之后的 n行，每行 p个整数，表示矩阵 A 。<br>
+之后的 p 行，每行 m 个整数，表示矩阵 B。<br>
+输出<br>
+输出 n 行，每行 m个整数，表示矩阵 A×B ，每个数模10 ^ 9 + 7 输出，如果输出为负数则将该数加上10^9+7。<br>
+样例输入<br>
+3 4 5<br>
+-2 -8 -9 8<br>
+-10 0 6 -8<br>
+-10 -6 6 9<br>
+4 -7 5 -5 9<br>
+10 -2 -10 5 5<br>
+-3 -7 -3 8 -2<br>
+-6 7 7 3 -2<br>
+样例输出<br>
+999999898 149 153 999999929 999999951<br>
+999999997 999999979 999999883 74 999999921<br>
+999999835 103 55 95 999999857<br>
+//代码<br>
+#include &lt;bits/stdc++.h&gt;<br>
+#define MN 100+10<br>
+using namespace std;<br>
+const int mod=1000000007;<br>
+long long a[MN][MN],b[MN][MN],c[MN][MN];<br>
+int main()<br>
+{<br>
+int n,p,m;<br>
+cin&gt;&gt;n&gt;&gt;p&gt;&gt;m;<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=p;j++)<br>
+cin&gt;&gt;a[i][j];<br>
+}<br>
+for(int i=1;i&lt;=p;i++){<br>
+for(int j=1;j&lt;=m;j++)<br>
+cin&gt;&gt;b[i][j];<br>
+}<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=m;j++){<br>
+for(int k=1;k&lt;=p;k++){<br>
+c[i][j]=(c[i][j]+a[i][k]*b[k][j])%mod;<br>
+}<br>
+}<br>
+}<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=m;j++){<br>
+if(c[i][j]&lt;0)<br>
+c[i][j]=(c[i][j]+mod)%mod;<br>
+cout&lt;&lt;c[i][j]&lt;&lt;&quot; &quot;;<br>
+}<br>
+cout&lt;&lt;endl;<br>
+}<br>
+return 0;<br>
+}</p>
 
             </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://awatesolo.github.io/tag/SBeXO5F24/" class="tag">
+                    二维数组
+                  </a>
+                
+                  <a href="https://awatesolo.github.io/tag/gi2CpVLtd/" class="tag">
+                    基础但变态
+                  </a>
+                
+              </div>
             
             
 

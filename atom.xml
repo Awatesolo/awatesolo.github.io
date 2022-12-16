@@ -1,45 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://awatesolo.github.io</id>
-    <title>Gridea</title>
-    <updated>2022-12-10T04:48:08.427Z</updated>
+    <title>圣诞节快乐！</title>
+    <updated>2022-12-16T09:32:22.583Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://awatesolo.github.io"/>
     <link rel="self" href="https://awatesolo.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>登录github以评论</subtitle>
     <logo>https://awatesolo.github.io/images/avatar.png</logo>
     <icon>https://awatesolo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Gridea</rights>
+    <rights>All rights reserved 2022, 圣诞节快乐！</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://awatesolo.github.io/post/hello-gridea/</id>
-        <link href="https://awatesolo.github.io/post/hello-gridea/">
+        <title type="html"><![CDATA[稀疏矩阵]]></title>
+        <id>https://awatesolo.github.io/post/xi-shu-ju-zhen/</id>
+        <link href="https://awatesolo.github.io/post/xi-shu-ju-zhen/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2022-12-11T02:15:18.000Z</updated>
+        <content type="html"><![CDATA[<p>题目描述<br>
+  大部分元素是0的矩阵称为稀疏矩阵，假设有k个非0元素，则可把稀疏矩阵用K<em>3的矩阵简记之，其中第一列是行号，第二列是列号，第三列是该行、该列下的非元素的值。如：<br>
+    0  0  0  5         写简记成： 1  4  5      //第1行第4列有个数是5<br>
+    0  2  0  0                          2  2  2      //第2行第2列有个数是2<br>
+    0  1  0  0                          3  2  1      //第3行第2列有个数是1<br>
+   试编程读入一稀疏矩阵，转换成简记形式，并输出。<br>
+输入<br>
+第一行两个整数n和m，1≤n,m≤1000；<br>
+接下来共n行，每行m个整数，表示一个n</em>m的稀疏矩阵，其中稀疏矩阵非0元素个数为k，1≤k≤100。<br>
+输出<br>
+k行，每行三个整数，描述稀疏矩阵一个非0元素。<br>
+样例输入<br>
+3 5<br>
+0 0 0 0 5<br>
+0 0 4 0 0<br>
+1 0 0 0 1<br>
+样例输出<br>
+1 5 5<br>
+2 3 4<br>
+3 1 1<br>
+3 5 1<br>
+*注：内存限制3MB<br>
+//因为有内存限制，所以不能用二维数组做<br>
+//代码懒得写，直接一个数一个数的读就刑</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[矩阵乘矩阵]]></title>
+        <id>https://awatesolo.github.io/post/qiu-su-shu/</id>
+        <link href="https://awatesolo.github.io/post/qiu-su-shu/">
+        </link>
+        <updated>2022-12-10T05:29:01.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>BLOG第一篇文章，QQ：1242454364<br>
+题目描述<br>
+分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。<br>
+下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵<br>
+<img src="https://awatesolo.github.io/post-images/1670651041141.gif" alt="" loading="lazy"><br>
+关于矩阵运算的内容，点击以下链接自行补脑 https://blog.csdn.net/enjoy_pascal/article/details/78023441<br>
+<img src="https://awatesolo.github.io/post-images/1670651072232.jpg" alt="" loading="lazy"><br>
+输入<br>
+第一行三个正整数 n、p、m，表示矩阵的长宽。<br>
+之后的 n行，每行 p个整数，表示矩阵 A 。<br>
+之后的 p 行，每行 m 个整数，表示矩阵 B。<br>
+输出<br>
+输出 n 行，每行 m个整数，表示矩阵 A×B ，每个数模10 ^ 9 + 7 输出，如果输出为负数则将该数加上10^9+7。<br>
+样例输入<br>
+3 4 5<br>
+-2 -8 -9 8<br>
+-10 0 6 -8<br>
+-10 -6 6 9<br>
+4 -7 5 -5 9<br>
+10 -2 -10 5 5<br>
+-3 -7 -3 8 -2<br>
+-6 7 7 3 -2<br>
+样例输出<br>
+999999898 149 153 999999929 999999951<br>
+999999997 999999979 999999883 74 999999921<br>
+999999835 103 55 95 999999857<br>
+//代码<br>
+#include &lt;bits/stdc++.h&gt;<br>
+#define MN 100+10<br>
+using namespace std;<br>
+const int mod=1000000007;<br>
+long long a[MN][MN],b[MN][MN],c[MN][MN];<br>
+int main()<br>
+{<br>
+int n,p,m;<br>
+cin&gt;&gt;n&gt;&gt;p&gt;&gt;m;<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=p;j++)<br>
+cin&gt;&gt;a[i][j];<br>
+}<br>
+for(int i=1;i&lt;=p;i++){<br>
+for(int j=1;j&lt;=m;j++)<br>
+cin&gt;&gt;b[i][j];<br>
+}<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=m;j++){<br>
+for(int k=1;k&lt;=p;k++){<br>
+c[i][j]=(c[i][j]+a[i][k]*b[k][j])%mod;<br>
+}<br>
+}<br>
+}<br>
+for(int i=1;i&lt;=n;i++){<br>
+for(int j=1;j&lt;=m;j++){<br>
+if(c[i][j]&lt;0)<br>
+c[i][j]=(c[i][j]+mod)%mod;<br>
+cout&lt;&lt;c[i][j]&lt;&lt;&quot; &quot;;<br>
+}<br>
+cout&lt;&lt;endl;<br>
+}<br>
+return 0;<br>
+}</p>
 ]]></content>
     </entry>
 </feed>
