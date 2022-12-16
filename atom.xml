@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://awatesolo.github.io</id>
     <title>圣诞节快乐！</title>
-    <updated>2022-12-16T09:12:04.364Z</updated>
+    <updated>2022-12-16T09:16:52.555Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://awatesolo.github.io"/>
     <link rel="self" href="https://awatesolo.github.io/atom.xml"/>
@@ -48,7 +48,8 @@ k行，每行三个整数，描述稀疏矩阵一个非0元素。<br>
         <link href="https://awatesolo.github.io/post/qiu-su-shu/">
         </link>
         <updated>2022-12-10T05:29:01.000Z</updated>
-        <content type="html"><![CDATA[<p>BLOG第一篇文章，QQ：1242454364<br>
+        <content type="html"><![CDATA[<!-- more -->
+<p>BLOG第一篇文章，QQ：1242454364<br>
 题目描述<br>
 分别给定 n×p和 p×m的两个矩阵 A 和 B求 A×B 。<br>
 下面的算式则是一个1 x 3的矩阵乘以3 x 2的矩阵，得到一个1 x 2的矩阵<br>
