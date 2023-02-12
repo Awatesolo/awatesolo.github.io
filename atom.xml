@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://awatesolo.github.io</id>
-    <title>新年快乐</title>
-    <updated>2023-02-01T13:49:23.717Z</updated>
+    <title>A BLOG </title>
+    <updated>2023-02-12T00:47:44.453Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://awatesolo.github.io"/>
     <link rel="self" href="https://awatesolo.github.io/atom.xml"/>
     <subtitle>登录github以评论</subtitle>
     <logo>https://awatesolo.github.io/images/avatar.png</logo>
     <icon>https://awatesolo.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2023, 新年快乐</rights>
+    <rights>All rights reserved 2023, A BLOG </rights>
     <entry>
         <title type="html"><![CDATA[稀疏矩阵]]></title>
         <id>https://awatesolo.github.io/post/xi-shu-ju-zhen/</id>
