@@ -4,69 +4,103 @@
     <meta charset="utf-8" >
 
 <title>标签列表 | A BLOG </title>
+<meta name="description" content="登录github以评论">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://awatesolo.github.io/favicon.ico?v=1676173887445">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://awatesolo.github.io/favicon.ico?v=1676173571529">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://awatesolo.github.io/styles/main.css">
 
 
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
-
-    <meta name="description" content="登录github以评论">
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://awatesolo.github.io">
-        <img src="https://awatesolo.github.io/images/avatar.png?v=1676173571529" class="site-logo">
-        <h1 class="site-title">A BLOG </h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://awatesolo.github.io">A BLOG </a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-          <a href="/" class="site-nav">
-            首页
-          </a>
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
         
-      
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
         
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
         
-      
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
         
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
+      </ul>
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <h2 class="tag-list-title">标签列表</h2>
+          <div class="row tags-container">
+            
+              <a href="https://awatesolo.github.io/tag/SBeXO5F24/" class="badge warning">
+                二维数组
+              </a>
+            
+              <a href="https://awatesolo.github.io/tag/gi2CpVLtd/" class="badge success">
+                基础但变态
+              </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://awatesolo.github.io/images/avatar.png?v=1676173887445" class="no-responsive avatar">
+    <div class="text-muted">登录github以评论</div>
     <div class="social-container">
       
         
-          <a class="social-link" href="github.com" target="_blank">
+          <a href="github.com" target="_blank">
             <i class="fab fa-github"></i>
           </a>
         
@@ -80,45 +114,67 @@
         
       
     </div>
-    <div class="site-description">
-      登录github以评论
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
     </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Awatesolo</a> | <a class="rss" href="https://awatesolo.github.io/atom.xml" target="_blank">RSS</a>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://awatesolo.github.io/post/xi-shu-ju-zhen/">稀疏矩阵</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://awatesolo.github.io/post/qiu-su-shu/">矩阵乘矩阵</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://awatesolo.github.io/post/about/">关于</a>
+            </li>
+          
+        
+      </ul>
     </div>
   </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://awatesolo.github.io/tag/SBeXO5F24/" class="badge ">
+          二维数组
+        </a>
+      
+        <a href="https://awatesolo.github.io/tag/gi2CpVLtd/" class="badge success">
+          基础但变态
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Awatesolo</a> | <a class="rss" href="https://awatesolo.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
 </div>
-
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
-            
-              <a class="tag" href="https://awatesolo.github.io/tag/SBeXO5F24/">二维数组</a>
-            
-              <a class="tag" href="https://awatesolo.github.io/tag/gi2CpVLtd/">基础但变态</a>
-            
-          </div>
-        </div>
-      </div>
+  
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 <script type="application/javascript">
 
 AOS.init();
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+hljs.initHighlightingOnLoad()
 
 </script>
-
-
 
 
 
